@@ -1,0 +1,92 @@
+<div class="container mt-5">
+
+<div class="row gutters mt-4 pt-4">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="card h-100 text-dark">
+			<div class="card-body">
+				<div class="account-settings">
+					<div class="user-profile">
+						<div class="user-avatar">
+							<img src="/jobseeker-images/{{job_seeker._id}}.jpg" alt="not available">
+						</div>
+						<h5 class="user-name">{{job_seeker.Name}}</h5>
+						<h6 class="user-email">{{job_seeker.Email}}</h6>
+					</div>
+					<div class="about">
+						<h5 class="mb-2 text-primary">About</h5>
+						<p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pt-2">
+		<div class="card h-100 text-dark">
+			<div class="card-body ">
+				<div class="row gutters">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h6 class="mb-3 text-primary">Personal Details</h6>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="fullName">Name</label>
+							<input type="text" class="form-control text-dark " name="Name" value="{{job_seeker.Name}}" readonly>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="eMail">Email</label>
+							<input type="email" class="form-control text-dark" name="Email" value="{{job_seeker.Email}}" readonly >
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="phone">Phone</label>
+							<input type="text" class="form-control text-dark" name="Phone" value="{{job_seeker.Phone}}" readonly>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="website">Experience</label>
+							<input type="text" class="form-control text-dark" name="Experience" value="{{job_seeker.Experience}}" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="row gutters">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h6 class="mb-3 text-primary">main-points</h6>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="Street">Street</label>
+							<input type="name" class="form-control text-dark" name="Skills" value="{{job_seeker.Skills}}" readonly>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="ciTy">City</label>
+							<input type="name" class="form-control text-dark" name="Domain" value="{{job_seeker.Domain}}" readonly>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="sTate">Githubid</label>
+							<input type="text" class="form-control text-dark" name="Githubid" value="{{job_seeker.Github}}" readonly>
+						</div>
+					</div>
+					
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+</main>
+</div>
+            </div>
+            <div class="col-md-2 float-right">
+              <a href="/update-profile" class="btn btn-primary ">update</a>
+            </div>
+        </div>
+       

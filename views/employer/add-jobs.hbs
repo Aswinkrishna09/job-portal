@@ -1,0 +1,72 @@
+<div class="content">
+    <main>
+        <section>
+            <div class="container pt-4 mt-4 text-dark">
+                <form action="/employer/add-jobs" method="POST" enctype="application/x-www-form-urlencoded">
+                    <h2 class="text-center">Add-Jobs</h2>
+                    <div class="row  pt-4">
+                        <div class="col-md-6">
+
+
+
+                            <label for="">name of company</label>
+                            <input type="text" name="nameofcompany" class="form-control" required>
+                            <label for="">location</label>
+                            <input type="text" name="location" class="form-control" required>
+
+                            <label for="">Designation</label>
+                            <input type="text" name="Designation" class="form-control" required>
+
+                            <label for="">type</label><br>
+                            <select name="type" id="type" required>
+                               <option value="full-time">full-time</option>
+                                <option value="part-time">part-time</option>
+                            </select><br>
+                            <label for="">skills</label>
+                            <input type="text" name="skills" class="form-control" required>
+
+                            <label for="">category</label>
+
+                            <select name="catagory" id="catagory" required>
+                                <option value="Web-Development">Web-Development</option>
+                                <option value="App-Development">App-Development</option>
+                                <option value="Normal-Employee">Normal-Employee</option>
+                                <option value="Management">Management</option>
+                                <option value="technology">technology</option>
+                            </select><br>
+                            <label for="logoimage">logo-Image</label>
+                            <input type="file" name="logo" required>
+                            <label for="lastdateforapply">lastdateforapply</label><br>
+                            <input type="date" name="lastdateforapply" required>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <label for="">qualification</label>
+                            <input type="text" name="qualification" class="form-control" required>
+
+                            <label for="">experience</label>
+                            <input type="text" name="experience" class="form-control" required>
+                            <label for="">language needed</label>
+                            <input type="text" name="languageneeded" class="form-control" required>
+
+                            <label for="">pin number</label>
+                            <input type="text" name="pin" class="form-control" required>
+
+                            <label for="">description</label>
+                            <input type="text" name="description" class="form-control" required>
+                            <label for="">salery</label>
+                            <input type="text" name="salery" class="form-control" required>
+
+
+
+                            <button type="submit" class="btn btn-success mt-4 float-right" onclick="alert(" job
+                                added")">Submit</button>
+                </form>
+
+            </div>
+</div>
+</div>
+</section>
+</main>
+</div>

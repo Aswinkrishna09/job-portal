@@ -1,0 +1,37 @@
+<div class="content">
+  <main>
+<section>
+    <div class="container">
+        <div class="row mt-4">
+           
+        </div>
+        <table class="table mt-5 text-dark">
+  <thead>
+    <tr>
+      <th scope="col">Jobseeeker-Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">block-unblock</th>
+    </tr>
+  </thead>
+  {{#each jobseekerNum}}
+  <tbody>
+    <tr>
+      
+      <td>{{this.Name}}</td>
+      <td>{{this.Email}}</td>
+     
+      <td>
+        <a href="/admin/block-jobseeker/?id={{this._id}}" class="btn btn-danger" onclick="return confirm('Are you want to block')">block</a>
+      
+        <a href="/admin/unblock-jobseeker/?id={{this._id}}" class="btn btn-primary" onclick="return confirm('Are you want to unblock')">unblock</a>
+      </td>
+    
+    </tr>
+  
+  </tbody>
+  {{/each}}
+</table>
+    </div>
+</section>
+</main>
+</div>

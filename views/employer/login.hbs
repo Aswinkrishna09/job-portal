@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row pt-5">
+    <div class="col-lg-4 col-md-4"></div>
+    <div class="col-lg-4 col-md-4">
+      <form action="/employer/login" method="post" class="border border-dark p-3" role="form"
+        enctype="application/x-www-form-urlencoded">
+        <center>
+          <h4 class="text-dark">Welcome Back Employer</h4>
+          <img class=" img-fluid" style="border-radius: 50%;" src="/images/admin-logo.jpg">
+          <h2 class="font-weight-bold text-light bg-dark">Employer</h2>
+          {{#if logginErr}}
+          <p class="error">Invalid user name or password</p>
+          {{/if}}
+        </center>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+
+          <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="Password">Password</label>
+
+          <input type="password" class="form-control" name="Password" placeholder="Password">
+
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-success  btn-block">Submit</button>
+         <div>
+        <center>or</center>
+        <center><h4>New to Job-Portal</h4></center>
+       <a class="btn btn-primary btn-block" href='./signup'>Create an account?</a>
+      </div>
+      </form>
+    </div>
+    <div class="col-lg-4 col-md-4"></div>
+  </div>
+</div>

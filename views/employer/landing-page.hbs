@@ -1,0 +1,65 @@
+
+      <div class="content">
+       <main>
+        <div class="container py-5">
+          <div class="row">
+        
+            <!-- For demo purpose -->
+            <div class="col-lg-12 text-dark text-center">
+               <h1>GIVE THE PERFECT JOB</h1>
+            </div>
+            <div class="col-lg-12 ">
+               
+              <h3 class="text-dark">Dashboard</h3>
+
+        <h3 class="text-dark">Added-Jobs</h3>
+        <h4 class="text-dark">Latest Updated Jobs :</h4>
+            </div>
+            
+            <!-- END -->
+        
+            <div class="col-xl-12 col-lg-12 mb-4">
+        {{#each jobs}}
+        <div class="card border-5 active pb-0 px-3 text-dark">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <h4 class="card-title "><b>{{this.jobs.Designation}}</b></h4>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="float-right mr-2"><a class=" btn btn-success" href="/employer/edit-job/{{this._id}}">edit</a></div>
+                        <div class="float-right mr-2"><a class=" btn btn-danger"  href="/employer/delete-job/{{this._id}}"  onclick="return confirm('Are you want to delete ')" >delete</a></div>
+                    </div>
+                    <div class="col">
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <p class="card-text text-muted small "> <img
+                                    src="https://img.icons8.com/metro/26/000000/star.png" class="mr-1 " width="19"
+                                    height="19" id="star"> <span class="vl mr-2 ml-0"></span>{{this.description}}</p>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-white px-0 ">
+                <div class="row">
+                    <div class=" col-md-auto "> <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                            data-wow-delay="0.7s"><img src="https://img.icons8.com/ios/50/000000/settings.png"
+                                width="19" height="19"> <small>experience :{{this.jobs.experience}}</small></a> <a href=""> <i
+                            class="mdi mdi-settings-outline"></i> <img
+                            src="https://img.icons8.com/metro/26/000000/link.png" width="17" height="17" id="plus">
+                        <small>last date for apply :{{this.jobs.lastdateforapply}}</small></a> <a href="#"
+                            class="btn btn-outlined btn-black text-muted "><small>Location
+                                :{{this.jobs.location}}</small></a> <span class="vl ml-3"></span> </div>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+            </div>
+          </div>
+        </div>
+       
+        
+       </main>
+      </div>
+     
+  

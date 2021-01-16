@@ -1,0 +1,52 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-mattBlackLight fixed-top" style="background-color:#ded7d7;">
+    <button class="navbar-toggler sideMenuToggler" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand text-dark"  href="#">Job-Board
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <a class="btn  ml-3" href="/">Home</a>
+        <a class="btn  ml-3" href="/login">Dashboard</a>
+        <a class="btn  ml-3" href="/applied-jobs">applied-jobs</a>
+        <a class="btn  ml-3" href="/about">About-us</a>
+        {{#if job_seeker}}
+        {{else}}
+         <a class="btn  ml-3" href="/employer/login">post a job</a>
+        {{/if}}
+       
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons icon">
+            person
+          </i>
+
+          <span class="text">
+            {{#if job_seeker}}
+            {{job_seeker.Name}}
+            {{/if}}
+          </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          {{#if job_seeker}}
+
+          <a class="dropdown-item" href="/logout">logout</a>
+          {{else}}
+          <a class="dropdown-item" href="/login">login</a>
+          {{/if}}
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/profile">Profile</a>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </nav>
+</header>

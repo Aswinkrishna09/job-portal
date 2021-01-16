@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="row pt-4">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <form action="/get-otp" method="post" class="border border-dark p-3" role="form"
+        enctype="application/x-www-form-urlencoded">
+        <center><strong><h3 class="text-dark">Login with OTP</h3></strong></center>
+         {{#if otpLogginErr}}
+          <p class="error text-dark">Invalid number</p>
+          {{/if}}
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="text-dark">phone number</label>
+
+          <input type="text" class="form-control" name="Number" aria-describedby="emailHelp" placeholder="Enter phone number">
+            
+            <div class="pt-2">
+                 <button type="submit" class="btn btn-success  btn-block">get-otp</button>
+            </div>
+            </form>
+            <form action="/job-seeker/login" method="post">
+            <div class="pt-2">
+                <center>or</center>
+                <a href="/login">login using email and password?</a>
+
+            </div>
+         </form>
+        </div>
+
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>

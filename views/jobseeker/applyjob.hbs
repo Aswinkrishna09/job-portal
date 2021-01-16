@@ -1,0 +1,30 @@
+<section>
+    <div class="container pt-4 mt-4">
+        <div class="row  pt-4">
+            <div class="col-md-6">
+                <h2 class="text-center">Apply for a Job</h2>
+                <form action="/employer/add-jobs" method="POST" enctype="application/x-www-form-urlencoded">
+
+                    <label for="">job</label>
+                    <input type="text" name="Job" class="form-control">
+                    <label for="">updated date</label>
+                    <input type="date" name="Date" class="form-control">
+
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control">
+
+                    <label for="">Experience Needed</label>
+                    <input type="text" name="Experience" class="form-control">
+                    <label for="">last date for aply</label>
+                    <input type="date" name="LastDateForApply" class="form-control">
+                    <label for="">location</label>
+                    <input type="text" name="Location" class="form-control">
+
+
+                    <button type="submit" class="btn btn-success mt-4" onclick="alert("job added")">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>

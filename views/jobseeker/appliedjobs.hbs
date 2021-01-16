@@ -1,0 +1,35 @@
+<section class="pt-4">
+    <div class="container  mt-4">
+        
+        <table class="table mt-5 text-dark">
+            
+            <tr>
+                
+            <thead class="p-2">
+                <th>Job</th>
+                <th>Company Name</th>
+               
+                <th>Status</th>
+            </thead>
+         </tr>
+           
+       {{#each response}}
+          <tbody>
+           
+              <tr>
+                 
+                   
+                  <td>{{this.jobDetails.Designation}}</td>
+                  <td>{{this.jobDetails.nameofcompany}}</td>
+                  <td>applied</td>
+                 
+              </tr>  
+            </tbody>
+        {{/each}}
+        
+       </table>
+       <hr>
+       
+
+       </div>
+</section>

@@ -1,0 +1,104 @@
+<section class="pt-4 ">
+
+    <div class="container mt-4">
+        <h1 class="pt-4 text-dark text-center">FIND THE PERFECT JOB</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark indigo mb-4">
+
+  <!-- Navbar brand -->
+ 
+
+  <!-- Collapsible content -->
+  {{!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> --}}
+
+    {{!-- <form class="form-inline "> --}}
+      <div class=" row md-form    my-0">
+           <input class="form-control col-md-4" id="searchName" type="text" placeholder="job title" aria-label="Search">
+            <input class="form-control col-md-4" type="text" placeholder="location" aria-label="Search">
+        <input class="form-control col-md-3" type="text" placeholder="Search" aria-label="Search">
+      </div>
+      <button href="" class="btn btn-primary" type="submit">Search</button>
+    {{!-- </form> --}}
+
+  {{!-- </div> --}}
+    </nav>
+  <!-- Collapsible content -->
+
+        <h3 class="pt-4 text-dark">Dashboard</h3>
+        <h4 class="text-dark">Latest Job Updates :</h4>
+         <div class="row text-dark">
+        <div class="col-lg-6">
+        {{#each response}}
+       
+        <div class="card mt-5 border-5 active pb-0 px-3 ">
+            <div class="card-body box text-dark">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <h4 class="card-title "><b>{{this.Jobs.Designation}}</b></h4>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="float-right"><a class=" btn btn-primary"
+                                href="/viewjob/?id={{this._id}}">view-job</a></div>
+                    </div>
+                    <div class="col">
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <p class="card-text text-muted small "> <img
+                                    src="https://img.icons8.com/metro/26/000000/star.png" class="mr-1 " width="19"
+                                    height="19" id="star"> <span class="vl mr-2 ml-0"></span>{{this.Jobs.description}}
+                            </p>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-white px-0 ">
+                <div class="row">
+                    <div class=" col-md-auto "> <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                            data-wow-delay="0.7s"><img src="https://img.icons8.com/ios/50/000000/settings.png"
+                                width="19" height="19"> <small>experience :{{this.Jobs.experience}}</small></a> <i
+                            class="mdi mdi-settings-outline"></i> <img
+                            src="https://img.icons8.com/metro/26/000000/link.png" width="17" height="17" id="plus">
+                        <small class="text-dark">last date for apply :{{this.Jobs.lastdateforapply}}</small> <a href="#"
+                            class="btn btn-outlined btn-black text-muted "><small>Location
+                                :{{this.Jobs.location}}</small></a> <span class="vl ml-3"></span> </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-6">
+            
+       
+        {{/each}}
+         </div>
+        </div>
+    </div>
+ 
+    <script>
+        $(function(){
+            $('#searchName').autocomplete({
+                source: function(req,res){
+                    $.ajax({
+                        url:'/autocomplete/',
+                        dataType:'jsonp',
+                        type:'GET',
+                        data:req,
+                        success: function(data){
+                            console.log(data)
+                        res(data)
+                        },
+                        error: function(err){
+                            console.log(err.status)
+                        }
+                    })
+                },
+                minLength:1,
+
+               select: function(event,ui){
+                   if(ui.item){
+                       $('#searchName').text(ui.item.label)
+                   }
+               }
+            })
+        })
+    </script>
+
+</section>

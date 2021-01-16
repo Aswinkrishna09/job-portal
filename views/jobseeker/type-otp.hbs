@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <div class="row pt-4">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <form action="/type-otp/?id={{response2}}" method="post" class="border border-dark p-3" role="form"
+        enctype="application/x-www-form-urlencoded">
+        <center><strong><h3 class="text-dark">enter your otp</h3></strong></center>
+
+          <input type="text" class="form-control" name="number" value="{{number}}" readonly>    
+          <input type="text" class="form-control" name="otp" aria-describedby="emailHelp" placeholder="Enter the otp">
+            
+            <div class="pt-2">
+                 <button type="submit" class="btn btn-success  btn-block">verify-otp</button>
+            </div>
+            <div class="pt-2">
+                <a href="/otp-login" class="btn btn-success  btn-block">resend</a>
+            </div>
+            </form>
+        </div>
+
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+  
+ <div class="container pt-5">
+     {{#each response}}
+        <div class="card mt-5 border-5 active pb-0 px-3 ">
+            <div class="card-body box ">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <h4 class="card-title "><b>{{this.Jobs.Job}}</b>({{this.Jobs.Date}})</h4>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="float-right"><a class=" btn btn-success"
+                                href="/apply/?id={{this._id}}">apply</a></div>
+                    </div>
+                    <div class="col">
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <p class="card-text text-muted small "> <img
+                                    src="https://img.icons8.com/metro/26/000000/star.png" class="mr-1 " width="19"
+                                    height="19" id="star"> <span class="vl mr-2 ml-0"></span>{{this.Jobs.Description}}
+                            </p>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-white px-0 ">
+                <div class="row">
+                    <div class=" col-md-auto "> <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                            data-wow-delay="0.7s"><img src="https://img.icons8.com/ios/50/000000/settings.png"
+                                width="19" height="19"> <small>experience :{{this.Jobs.Experience}}</small></a> <i
+                            class="mdi mdi-settings-outline"></i> <img
+                            src="https://img.icons8.com/metro/26/000000/link.png" width="17" height="17" id="plus">
+                        <small>last date for apply :{{this.Jobs.LastDateForApply}}</small> <a href="#"
+                            class="btn btn-outlined btn-black text-muted "><small>Location
+                                :{{this.Jobs.Location}}</small></a> <span class="vl ml-3"></span> </div>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+</div>

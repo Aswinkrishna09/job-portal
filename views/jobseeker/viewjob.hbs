@@ -1,0 +1,60 @@
+<div class="content pt-4">
+    <main >
+        <section>
+            <div class="container pt-4 mt-4 text-dark">
+                <form action="/employer/add-jobs" method="POST" enctype="application/x-www-form-urlencoded">
+                    <h2 class="text-center">View-Jobs</h2>
+					
+                    <div class="row  pt-4">
+                        <div class="col-md-6">
+
+						  
+
+                            <label for="">name of company</label>
+                            <input type="text"  class="form-control text-dark" readonly value="{{response.nameofcompany}}">
+                            <label for="">location</label>
+                            <input type="text" class="form-control text-dark" readonly value="{{response.location}}">
+
+                            <label for="">Designation</label>
+                            <input type="text"  class="form-control text-dark" readonly value="{{response.Designation}}">
+
+                            <label for="">type</label><br>
+                            <select  id="type" readonly >
+                               <option value="full-time">full-time</option>
+                                <option value="part-time">part-time</option>
+                            </select><br>
+                            <label for="">skills</label>
+                            <input type="text" class="form-control text-dark" readonly value="{{response.skills}}">
+                            <label for="lastdateforapply">lastdateforapply</label><br>
+                            <input type="date" readonly value="{{response.lastdateforapply}}">
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <label for="">qualification</label>
+                            <input type="text"  class="form-control text-dark" readonly value="{{response.qualification}}">
+
+                            <label for="">experience</label>
+                            <input type="text" class="form-control text-dark" readonly value="{{response.experience}}">
+                            <label for="">language needed</label>
+                            <input type="text"  class="form-control text-dark" readonly value="{{response.languageneeded}}">
+
+                            <label for="">pin number</label>
+                            <input type="text" class="form-control text-dark"readonly value="{{response.pin}}">
+
+                            <label for="">description</label>
+                            <input type="text"  class="form-control text-dark"readonly value="{{response.description}}">
+                            <label for="">salery</label>
+                            <input type="text" class="form-control text-dark" readonly value="{{response.salery}}">
+
+
+
+                          <a class=" btn btn-primary" href="/apply/?id={{id}}">apply</a>
+                </form>
+
+            </div>
+</div>
+</div>
+</section>
+</main>
+</div>

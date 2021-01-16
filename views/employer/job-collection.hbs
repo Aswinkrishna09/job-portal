@@ -1,0 +1,44 @@
+<section class="pt-4">
+    <div class="container  mt-4">
+
+        <table class="table mt-5 text-dark">
+            <tr>
+            <thead class="p-2">
+                <th>Item</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </thead>
+         </tr>
+        
+       {{#each products}}
+          <tbody>
+              <tr>
+                 
+                   <td><img style="width: 50px;height: 50px;" src="/product-images/{{this.product._id}}.jpg" alt="not available"></td>
+                  <td>{{this.product.Name}}</td>
+                  <td>Rs.{{this.product.Price}}</td>
+                 
+                  </td>
+                  <td>
+                 
+                      <button type="button" class="btn btn-info mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}',-1)">-</button><span id="{{this.product._id}}">{{this.quantity}}</span><button type="button" class="btn btn-info ml-3 " onclick="changeQuantity('{{this._id}}','{{this.product._id}}',1)">+</button>
+                 
+                  </td>
+                  <td>
+                       <a href="/remove-product/?id={{this._id}}"class="btn btn-danger">Remove</a>
+                  </td>
+              </tr>  
+            </tbody>
+        {{/each}}
+        
+       </table>
+       <hr>
+       <div class="float-right mr-5 mt-4">
+            <h4 >Total : RS.100000</h4>
+            <a href="/place-order" class="d-flex justify-content-center btn btn-success">Place-Order</a>
+       </div>
+      
+
+       </div>
+</section>

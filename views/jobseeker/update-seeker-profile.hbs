@@ -1,0 +1,102 @@
+<div class="content mt-4">
+<main class=" mt-4">
+	<form action="/update-profile" method="POST" role="form"
+                enctype="multipart/form-data" >
+<div class="row gutters mt-4 pt-4  mt-4 pt-4">
+	<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+		<div class="card h-100 text-dark">
+			<div class="card-body">
+				<div class="account-settings">
+					<div class="user-profile">
+						<div class="user-avatar">
+							<label for="">profile</label>
+							 <img src="/jobseeker-images/{{job_seeker._id}}.jpg" alt="" width="100px" height="auto" id="imgView" class="pt-3">
+							 <input  type="file"  class="form-control" name="Image" onchange="viewImage(event)" >
+						</div>
+						<h5 class="user-name">{{job_seeker.Name}}</h5>
+						<h6 class="user-email">{{job_seeker.Email}}</h6>
+					</div>
+					<div class="about">
+						<h5 class="mb-2 text-primary">About</h5>
+						<p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+		<div class="card h-100 text-dark">
+			<div class="card-body">
+				<div class="row gutters">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h6 class="mb-3 text-primary">Personal Details</h6>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="fullName">Name</label>
+							<input type="text" class="form-control" name="Name" placeholder="Enter name" value="{{job_seeker.Name}}">
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="eMail">Email</label>
+							<input type="email" class="form-control" name="Email" placeholder="Enter email ID" value="{{job_seeker.Email}}">
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="phone">Phone</label>
+							<input type="text" class="form-control" name="Phone" placeholder="Enter phone number" value="{{job_seeker.Phone}}">
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="website">experience</label>
+							<input type="text" class="form-control" name="Experience" placeholder="experience" value="{{job_seeker.Experience}}">
+						</div>
+					</div>
+				</div>
+				<div class="row gutters">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h6 class="mb-3 text-primary">main-points</h6>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="Street">Skills</label>
+							<input type="name" class="form-control" name="Skills" placeholder="Enter your skills" value="{{job_seeker.Skills}}">
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="ciTy">main Domain</label>
+							<input type="name" class="form-control" name="Domain" placeholder="Enter your Main domain" value="{{job_seeker.Domain}}">
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="sTate">gitbub id</label>
+							<input type="text" class="form-control" name='Githubid' placeholder="Enter your github id" value="{{job_seeker.Githubid}}">
+						</div>
+					</div>
+					
+				</div>
+				<div class="row gutters">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="text-right">
+							<a  class="btn btn-secondary">Cancel</a>
+							<button  class="btn btn-primary" type="submit">Update</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+</main>
+</div>
+<script>
+    function viewImage(event){
+        document.getElementById("imgView").src=URL.createObjectURL(event.target.files[0])
+    }
+</script>
